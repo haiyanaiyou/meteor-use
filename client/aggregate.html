@@ -1,0 +1,52 @@
+<template name="aggregate">
+	<h4>投资统计</h4>
+	<div class="row">
+		<div class="col-xs-1">投资类别</div>
+		<div class="col-xs-3">
+			<select datafilter  name="invest_type" class="form-control" >
+				<option value="all">全部</option>
+				{{#each investType}}
+				<option value="{{this}}">{{this}}</option>
+				{{/each}}
+			</select>
+		</div>
+	</div>
+<br>
+	<div class="row">
+		<div class="col-xs-1">投资名称</div>
+		<div class="col-xs-3">
+			<select datafilter name="invest_name" class="form-control">
+				<option value="all">全部</option>
+				{{#each investName currentType}}
+				<option value="{{this}}">{{this}}</option>
+				{{/each}}
+			</select>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-6">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>投资类别</th>
+						<th>投资名称</th>
+						<th>收益</th>
+					</tr>
+				</thead>
+				<tbody>
+				{{#each incomeItems}}
+					<tr>
+						
+						<td>{{item.type}}</td>
+						<td>{{item.name}}</td>
+						<td>{{total}}</td>
+
+						
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</template>
