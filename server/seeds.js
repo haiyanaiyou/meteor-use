@@ -18,6 +18,24 @@ if(Investments.find().count()===0){
 		type:'艺术品',
 		name:'行进中的人',
 		income:25000
+	});
+	Investments.insert({
+		type:'艺术品',
+		name:'扭曲的口香糖',
+		income:25000
+	});
+	Investments.insert({
+		type:'股票',
+		name:'神牛组合+',
+		income:25000
+	});
+	Investments.insert({
+		type:'艺术品',
+		name:'奔跑的羊',
+		income:25000
 	})
+
+
+
 
 }
