@@ -35,7 +35,4 @@ if(Investments.find().count()===0){
 		income:25000
 	})
 
-
-
-
 }
